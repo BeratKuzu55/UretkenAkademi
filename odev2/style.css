@@ -1,0 +1,36 @@
+h1{
+    font-family: 'Harlytta Risedia', sans-serif;
+    font-size: 5rem;
+}
+#galeri {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 10px; 
+    max-width: 900px; 
+}
+body{
+    background-color: rgb(255, 224, 48);
+    text-align: center;
+}
+
+@media (min-width: 930px) {
+    #galeri {
+      grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+    }
+  }
+
+  @media (min-width: 631px) and (max-width: 930px) {
+    #galeri {
+      grid-template-columns: repeat(2, 1fr); /* 2 sütun */
+    }
+  }
+
+  @media (max-width: 630px) {
+    #galeri {
+      grid-template-columns: repeat(1, 1fr); /* 3 sütun */
+    }
+  }
