@@ -7,14 +7,15 @@ import './App.css'
 function App() {
 
   const [sepet , setSepeteEkle] = useState([]);
-  const products = getProducts();
-  
+  const products = getProducts(); 
 
   function handleSepeteEkle(addedProductID){
-    setSepeteEkle(products[addedProductID]);
-    console.log(sepet);
+    setSepeteEkle(prev=> [...prev ,products[addedProductID]]);
   }
 
+  useEffect(()=>{
+    console.log("merhaba");
+  } , [sepet])
   return (    
     <>
       <div className='grid grid-cols-3 gap-4'>
